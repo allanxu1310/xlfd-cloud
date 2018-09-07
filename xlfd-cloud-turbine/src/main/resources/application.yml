@@ -1,0 +1,32 @@
+server:
+  port: 8140
+
+spring:
+  application:
+    name: turbine-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+  endpoint:
+      health:
+        show-details: ALWAYS
+
+turbine:
+  app-config: user-server,order-server
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  combine-host: true
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream

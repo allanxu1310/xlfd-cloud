@@ -1,0 +1,35 @@
+server:
+  port: 8210
+
+spring:
+  application:
+    name: order-server
+
+  #指定zipkin中心
+  zipkin:
+    base-url: http://localhost:8160
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+      status-page-url: http://localhost:${server.port}/swagger-ui.html #配置swagger-ui方便在注册中心可以跳转到提供者的接口信息文档
+
+#spring cloud F版本 feign断路器需要手动开启
+feign:
+  hystrix:
+    enabled: true
+
+
+#springboot2.0. 的配置项为：
+#actuator端口
+management:
+  server:
+    port: 8210
+  endpoints:
+    web:
+   #   base-path: / #修改访问路径  2.0之前默认是/   2.0默认是 /actuator  可以通过这个属性值修改
+      exposure:
+        include: '*'  #开放所有页面节点  默认只开启了health、info两个节点

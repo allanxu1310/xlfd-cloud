@@ -1,0 +1,29 @@
+server:
+  port: 8200
+
+spring:
+  application:
+    name: user-server
+
+  #指定zipkin中心
+  zipkin:
+    base-url: http://localhost:8160
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+    prefer-ip-address: false    #如果不想使用主机名进行访问注册中心，也可以使用ip，但是需要先添加一条配置，该值默认false
+    status-page-url: http://localhost:${server.port}/swagger-ui.html #配置swagger-ui方便在注册中心可以跳转到提供者的接口信息文档
+
+#springboot2.0. 的配置项为：
+#actuator端口
+management:
+  server:
+    port: 8200
+  endpoints:
+    web:
+   #   base-path: / #修改访问路径  2.0之前默认是/   2.0默认是 /actuator  可以通过这个属性值修改
+      exposure:
+        include: '*'  #开放所有页面节点  默认只开启了health、info两个节点

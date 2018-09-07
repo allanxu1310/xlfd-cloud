@@ -1,0 +1,20 @@
+server:
+  port: 8120
+
+spring:
+  application:
+    name: gateway-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-user/**
+      serviceId: user-server
+    api-b:
+      path: /api-order/**
+      serviceId: order-server
