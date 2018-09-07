@@ -1,0 +1,19 @@
+server:
+  port: 8220
+
+spring:
+  application:
+    name: inventory-server
+
+#安全配置
+security:
+  oauth2:
+    resource:
+      id: inventory-server
+      #指定用户信息地址
+      user-info-uri: https://localhost:8130/auth/user
+      prefer-token-info: false
+
+logging:
+  config: classpath:logback-spring.xml
+  path: C:/xlfd-cloud/xlfd-cloud-inventory
