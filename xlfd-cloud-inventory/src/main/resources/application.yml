@@ -5,6 +5,13 @@ spring:
   application:
     name: inventory-server
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+      status-page-url: http://localhost:${server.port}/swagger-ui.html #配置swagger-ui方便在注册中心可以跳转到提供者的接口信息文档
+
 #安全配置
 security:
   oauth2:
