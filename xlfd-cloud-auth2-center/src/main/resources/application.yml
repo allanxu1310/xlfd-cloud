@@ -1,0 +1,24 @@
+server:
+  port: 8130
+
+#spring配置
+spring: #应用配置
+  application:
+    name: auth2-center
+
+eureka:
+  client:
+    serviceUrl: #配置服务中心(可配置多个,用逗号隔开)
+      defaultZone: https://localhost:8100/eureka
+
+#数据库配置
+data:
+  mongodb:
+    port: 27017
+    database: auth_server
+
+#安全配置
+security: #oauth2配置
+  oauth2:
+    resource: filter-order: 3
+

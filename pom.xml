@@ -14,6 +14,7 @@
 		<module>xlfd-cloud-eureka</module>
 
 		<module>xlfd-cloud-gateway</module>
+		<module>xlfd-cloud-auth2-center</module>
 
 		<module>xlfd-cloud-turbine</module>
 		<module>xlfd-cloud-admin</module>
@@ -112,6 +113,18 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${alibaba.druid.version}</version>
+			</dependency>
+			<!-- redis -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-redis</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<!-- mongodb -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-mongodb</artifactId>
+				<version>${spring-boot.version}</version>
 			</dependency>
 
 		</dependencies>

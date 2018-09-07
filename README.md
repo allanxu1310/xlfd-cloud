@@ -5,6 +5,8 @@ xlfd-cloud-eureka   注册中心  8100
 
 xlfd-cloud-gateway	网关     8120	
 
+xlfd-cloud-auth2-center	认证中心   8130	
+
 xlfd-cloud-turbine  断路器聚合监控  8140
 
 xlfd-cloud-admin    微服务监控   8150
