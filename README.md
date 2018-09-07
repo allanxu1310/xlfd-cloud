@@ -28,3 +28,10 @@ xlfd-cloud-order    order服务   8210
 xlfd-cloud-inventory   inventory服务  8220
 
 xlfd-cloud-apollo-client  apollo客户端应用示例 8310
+
+
+
+# 待完成
+1.集成ELK实时分布式日志系统
+2.基于oauth2和JWT搭建认证中心
+3.优化
