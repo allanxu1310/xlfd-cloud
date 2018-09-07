@@ -3,7 +3,7 @@ springcloud技术栈架构学习
 
 xlfd-cloud-eureka   注册中心  8100	
 
-xlfd-cloud-gateway	网关     8120	
+xlfd-cloud-gateway	api网关     8120	
 
 xlfd-cloud-auth2-center	认证中心   8130	
 
@@ -33,5 +33,12 @@ xlfd-cloud-apollo-client  apollo客户端应用示例 8310
 
 # 待完成
 1.集成ELK实时分布式日志系统
+
 2.基于oauth2和JWT搭建认证中心
+
 3.优化
+
+4.turbine,admin,zipkin三合一monitor
+
+5.feign调用token传递问题
+
