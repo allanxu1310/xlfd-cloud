@@ -11,10 +11,26 @@ eureka:
       defaultZone: http://localhost:8100/eureka/
 
 zuul:
-  routes:
+  routes:  #路由配置
     api-a:
       path: /api-user/**
       serviceId: user-server
     api-b:
       path: /api-order/**
       serviceId: order-server
+
+    auth: #认证服务
+     #响应的路径
+      path: /auth/**
+      #敏感头信息
+      sensitiveHeaders:
+      #重定向到的服务（根据服务id名称从注册中心获取服务地址）
+      serviceId:  auth2-center
+    producer: #生产者服务
+      #响应的路径
+      path: /producer/**
+      sensitiveHeaders:
+      #重定向到的服务（根据服务id名称从注册中心获取服务地址）
+      serviceId:  inventory-server
+  #添加代理头
+  add-proxy-headers: true
