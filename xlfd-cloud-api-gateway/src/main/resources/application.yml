@@ -10,8 +10,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8100/eureka/
 
+#APIÍø¹ØÅäÖÃ
 zuul:
-  routes:  #è·¯ç”±é…ç½®
+  routes:  #Â·ÓÉÅäÖÃ
     api-a:
       path: /api-user/**
       serviceId: user-server
@@ -19,18 +20,20 @@ zuul:
       path: /api-order/**
       serviceId: order-server
 
-    auth: #è®¤è¯æœåŠ¡
-     #å“åº”çš„è·¯å¾„
+    auth: #ÈÏÖ¤·şÎñ
+     #ÏìÓ¦µÄÂ·¾¶
       path: /auth/**
-      #æ•æ„Ÿå¤´ä¿¡æ¯
+      #Ãô¸ĞÍ·ĞÅÏ¢
       sensitiveHeaders:
-      #é‡å®šå‘åˆ°çš„æœåŠ¡ï¼ˆæ ¹æ®æœåŠ¡idåç§°ä»æ³¨å†Œä¸­å¿ƒè·å–æœåŠ¡åœ°å€ï¼‰
+      #ÖØ¶¨Ïòµ½µÄ·şÎñ£¨¸ù¾İ·şÎñidÃû³Æ´Ó×¢²áÖĞĞÄ»ñÈ¡·şÎñµØÖ·£©
       serviceId:  auth2-center
-    producer: #ç”Ÿäº§è€…æœåŠ¡
-      #å“åº”çš„è·¯å¾„
-      path: /producer/**
+    inventory: #Éú²úÕß·şÎñ
+      #ÏìÓ¦µÄÂ·¾¶
+      path: /inventory/**
       sensitiveHeaders:
-      #é‡å®šå‘åˆ°çš„æœåŠ¡ï¼ˆæ ¹æ®æœåŠ¡idåç§°ä»æ³¨å†Œä¸­å¿ƒè·å–æœåŠ¡åœ°å€ï¼‰
+      #ÖØ¶¨Ïòµ½µÄ·şÎñ£¨¸ù¾İ·şÎñidÃû³Æ´Ó×¢²áÖĞĞÄ»ñÈ¡·şÎñµØÖ·£©
       serviceId:  inventory-server
-  #æ·»åŠ ä»£ç†å¤´
+  #Ìí¼Ó´úÀíÍ·
   add-proxy-headers: true
+
+
