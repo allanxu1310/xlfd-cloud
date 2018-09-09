@@ -1,0 +1,43 @@
+server:
+  port: 8170
+
+spring:
+  application:
+    name: monitor-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+
+#springboot2.0. 的配置项为：
+#actuator端口
+management:
+  server:
+    port: 8170
+  endpoints:
+    web:
+   #   base-path: / #修改访问路径  2.0之前默认是/   2.0默认是 /actuator  可以通过这个属性值修改
+      exposure:
+        include: '*'  #开放所有页面节点  默认只开启了health、info两个节点
+      cors:
+              allowed-origins: "*"
+              allowed-methods: "*"
+  endpoint:
+        health:
+          show-details: ALWAYS
+
+  metrics:
+    web:
+      server:
+        auto-time-requests: false   #去除控制台异常
+
+
+turbine:
+  app-config: user-server,order-server
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  combine-host: true
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream
