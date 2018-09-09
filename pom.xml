@@ -13,8 +13,9 @@
 	<modules>
 		<module>xlfd-cloud-eureka</module>
 
-		<module>xlfd-cloud-gateway</module>
 		<module>xlfd-cloud-auth2-center</module>
+
+		<module>xlfd-cloud-api-gateway</module>
 
 		<module>xlfd-cloud-turbine</module>
 		<module>xlfd-cloud-admin</module>
