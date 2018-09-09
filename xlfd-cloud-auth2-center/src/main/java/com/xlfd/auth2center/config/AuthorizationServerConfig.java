@@ -37,12 +37,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;  // redis连接工厂
 
-    @Value("${resource.id:spring-boot-application}")
-    private String resourceId;  // 资源id
-
-    @Value("${access_token.validity_period:3600}")
-    private int accessTokenValiditySeconds = 3600;  //资源令牌验证过期时间
-
     /**
      * 令牌存储
      * @return redis令牌存储对象
@@ -71,12 +65,16 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("app")
-                .authorizedGrantTypes("authorization_code", "implicit")
-                .authorities("ROLE_CLIENT")
-                .scopes("read","write")
-                .resourceIds(resourceId)
-                .accessTokenValiditySeconds(accessTokenValiditySeconds);
+                .withClient("xlfd123")
+                .scopes("xx")
+                .secret("xlfd123")
+                .authorizedGrantTypes("password", "authorization_code", "refresh_token")
+                .and()
+                .withClient("webapp")
+                .scopes("xx")
+                .authorizedGrantTypes("implicit");
+
+
     }
 
     /**

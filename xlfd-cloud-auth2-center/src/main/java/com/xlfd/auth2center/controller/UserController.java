@@ -4,6 +4,8 @@ import com.xlfd.auth2center.entity.Account;
 import com.xlfd.auth2center.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
@@ -45,7 +47,7 @@ public class UserController {
      * @param user 当前用户
      * @return 授权信息
      */
-    @GetMapping("/user")
+    @RequestMapping(value = "/user",method = RequestMethod.POST)
     public Principal user(Principal user){
         return user;
     }
