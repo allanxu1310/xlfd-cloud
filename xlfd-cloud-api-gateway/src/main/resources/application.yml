@@ -12,14 +12,8 @@ eureka:
 
 #API网关配置
 zuul:
+  prefix: /api # 设置一个公共的前缀
   routes:  #路由配置
-    api-a:
-      path: /api-user/**
-      serviceId: user-server
-    api-b:
-      path: /api-order/**
-      serviceId: order-server
-
     auth: #认证服务
      #响应的路径
       path: /auth/**
