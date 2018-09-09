@@ -19,6 +19,7 @@
 		<module>xlfd-cloud-turbine</module>
 		<module>xlfd-cloud-admin</module>
 		<module>xlfd-cloud-zipkin</module>
+		<module>xlfd-cloud-monitor</module>
 
 		<module>xlfd-cloud-api</module>
 		<module>xlfd-cloud-common</module>

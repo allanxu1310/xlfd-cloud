@@ -19,13 +19,13 @@ xlfd-cloud-common   common模块
 
 xlfd-cloud-core     core模块
 
-xlfd-cloud-rabbitmq 消息服务    8300
-
 xlfd-cloud-user     user服务    8200
 
 xlfd-cloud-order    order服务   8210
 
 xlfd-cloud-inventory   inventory服务  8220
+
+xlfd-cloud-rabbitmq 消息服务    8300
 
 xlfd-cloud-apollo-client  apollo客户端应用示例 8310
 
@@ -39,6 +39,8 @@ xlfd-cloud-apollo-client  apollo客户端应用示例 8310
 3.优化
 
 4.turbine,admin,zipkin三合一monitor
+
+因为SBA最新版本为2.0.1，而spring-boot-admin-server-ui-turbine的版本为1.5.7，整合会出现问题，暂时分开使用
 
 5.feign调用token传递问题
 
