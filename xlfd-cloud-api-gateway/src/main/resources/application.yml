@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: gateway-server
+    name: api-gateway-server
 
 eureka:
   client:
