@@ -18,7 +18,7 @@ security:
     resource:
       id: inventory-server
       #指定用户信息地址
-      user-info-uri: https://localhost:8120/auth/user
+      user-info-uri: http://localhost:8120/api/auth/user
       prefer-token-info: false
 
 logging:
