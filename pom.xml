@@ -25,12 +25,14 @@
 		<module>xlfd-cloud-api</module>
 		<module>xlfd-cloud-common</module>
 		<module>xlfd-cloud-core</module>
+		<module>xlfd-cloud-service</module>
 		<module>xlfd-cloud-rabbitmq</module>
 
 		<module>xlfd-cloud-user</module>
 		<module>xlfd-cloud-order</module>
 		<module>xlfd-cloud-inventory</module>
 		<module>xlfd-cloud-apollo-client</module>
+		<module>xlfd-cloud-userweb</module>
 
 	</modules>
 
@@ -53,6 +55,7 @@
 		<org.mybatis.spring.version>1.3.0</org.mybatis.spring.version>
 		<alibaba.druid.version>1.1.0</alibaba.druid.version>
 		<mysql-connector-java.version>6.0.6</mysql-connector-java.version>
+		<pagehelper-spring-boot-starter.version>1.1.2</pagehelper-spring-boot-starter.version>
 	</properties>
 
 	<dependencyManagement>
@@ -89,6 +92,12 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
+			</dependency>
+			<!-- 分页插件 -->
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${pagehelper-spring-boot-starter.version}</version>
 			</dependency>
 
 			<!-- 访问数据库模块 -->

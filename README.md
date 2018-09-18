@@ -29,6 +29,8 @@ xlfd-cloud-rabbitmq 消息服务    8300
 
 xlfd-cloud-apollo-client  apollo客户端应用示例 8310
 
+xlfd-cloud-userweb  demo 8320
+
 
 
 # 待完成
