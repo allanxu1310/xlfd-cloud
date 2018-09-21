@@ -6,6 +6,7 @@ import com.xlfd.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,11 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    UserService userService;
 
-    @RequestMapping(value = "/getUser",method = RequestMethod.GET)
+    @RequestMapping(value = "/getUser",method = RequestMethod.POST)
+    @ResponseBody
     public JSONObject getUser(String id){
-       JSONObject result = new JSONObject();
+        JSONObject result = new JSONObject();
         User user = userService.getUser(id);
         result.put("user",user);
         return result;

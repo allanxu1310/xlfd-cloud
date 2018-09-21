@@ -5,35 +5,36 @@ spring:
   application:
     name: userweb-server
   datasource:
-          name: test
-          url: jdbc:mysql://127.0.0.1:3306/xlfd
-          username: root
-          password: 123456
-          # 使用druid数据源
-          type: com.alibaba.druid.pool.DruidDataSource
-          driver-class-name: com.mysql.jdbc.Driver
-          filters: stat
-          maxActive: 20
-          initialSize: 1
-          maxWait: 60000
-          minIdle: 1
-          timeBetweenEvictionRunsMillis: 60000
-          minEvictableIdleTimeMillis: 300000
-          validationQuery: select 'x'
-          testWhileIdle: true
-          testOnBorrow: false
-          testOnReturn: false
-          poolPreparedStatements: true
-          maxOpenPreparedStatements: 20
+    url: jdbc:mysql://localhost:3306/xlfd?serverTimezone=UTC&userSSL=false&characterEncoding=utf-8
+    username: root
+    password: 123456
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+      status-page-url: http://localhost:${server.port}/swagger-ui.html #配置swagger-ui方便在注册中心可以跳转到提供者的接口信息文档
 
 
 mybatis:
-  mapper-locations: xlfd-cloud-api/classpath:com.xlfd.api.mapper/*.*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  mapper-locations: classpath*:mapper/**/*.xml
   type-aliases-package: com.xlfd.api.entity  # 注意：对应实体类的路径
 
-#pagehelper分页插件
-pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql

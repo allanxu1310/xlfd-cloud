@@ -17,13 +17,20 @@
 		<version>1.0.0.RELEASE</version>
 	</parent>
 
+
 	<dependencies>
+		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
+		<!-- MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<!-- Mybatis依赖 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
