@@ -1,4 +1,4 @@
-package com.xlfd.api.entity;
+package com.xlfd.domain.user;
 
 import lombok.Data;
 
