@@ -5,7 +5,7 @@ spring:
   application:
     name: userweb-server
   datasource:
-    url: jdbc:mysql://localhost:3306/xlfd?serverTimezone=UTC&userSSL=false&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/xlfd?serverTimezone=UTC&userSSL=true&characterEncoding=utf-8
     username: root
     password: 123456
     # 使用druid数据源
@@ -36,5 +36,5 @@ eureka:
 
 mybatis:
   mapper-locations: classpath*:mapper/**/*.xml
-  type-aliases-package: com.xlfd.api.entity  # 注意：对应实体类的路径
+  type-aliases-package: com.xlfd.domain.*  # 注意：对应实体类的路径
 

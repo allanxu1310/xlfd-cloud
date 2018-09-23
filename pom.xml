@@ -12,9 +12,7 @@
 
 	<modules>
 		<module>xlfd-cloud-eureka</module>
-
 		<module>xlfd-cloud-auth2-center</module>
-
 		<module>xlfd-cloud-api-gateway</module>
 
 		<module>xlfd-cloud-turbine</module>
@@ -22,9 +20,10 @@
 		<module>xlfd-cloud-zipkin</module>
 		<module>xlfd-cloud-monitor</module>
 
-		<module>xlfd-cloud-api</module>
 		<module>xlfd-cloud-common</module>
 		<module>xlfd-cloud-core</module>
+		<module>xlfd-cloud-api</module>
+		<module>xlfd-cloud-domain</module>
 		<module>xlfd-cloud-service</module>
 		<module>xlfd-cloud-rabbitmq</module>
 

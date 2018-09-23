@@ -1,6 +1,6 @@
-package com.xlfd.api.mapper.user;
+package com.xlfd.api.user;
 
-import com.xlfd.api.entity.User;
+import com.xlfd.domain.user.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

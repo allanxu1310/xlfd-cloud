@@ -19,6 +19,11 @@
 
 
 	<dependencies>
+		<dependency>
+			<groupId>com.xlfd</groupId>
+			<artifactId>xlfd-cloud-domain</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>

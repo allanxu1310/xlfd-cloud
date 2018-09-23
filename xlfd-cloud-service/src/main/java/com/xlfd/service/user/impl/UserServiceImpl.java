@@ -1,7 +1,7 @@
 package com.xlfd.service.user.impl;
 
-import com.xlfd.api.entity.User;
-import com.xlfd.api.mapper.user.UserMapper;
+import com.xlfd.api.user.UserMapper;
+import com.xlfd.domain.user.User;
 import com.xlfd.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

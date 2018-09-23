@@ -1,6 +1,7 @@
 package com.xlfd.service.user;
 
-import com.xlfd.api.entity.User;
+
+import com.xlfd.domain.user.User;
 
 /**
  * @auther Allan

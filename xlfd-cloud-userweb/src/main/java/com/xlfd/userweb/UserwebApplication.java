@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("com.xlfd")
-@MapperScan("com.xlfd.api.mapper.user")//将项目中对应的mapper类的路径加进来就可以了
+@MapperScan("com.xlfd.api.*")//将项目中对应的mapper类的路径加进来就可以了
 public class UserwebApplication {
 
 	public static void main(String[] args) {
