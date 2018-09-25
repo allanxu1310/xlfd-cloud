@@ -1,6 +1,7 @@
 package com.xlfd.userweb.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.xlfd.common.constant.ResponseEnum;
 import com.xlfd.domain.user.User;
 import com.xlfd.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class UserController {
         JSONObject result = new JSONObject();
         User user = userService.getUser(id);
         result.put("user",user);
+        result.put("code",ResponseEnum.CODE.getType());
+        result.put("msg",ResponseEnum.CODE.getComment());
         return result;
     }
     @PostMapping(value = "/getUser1")
